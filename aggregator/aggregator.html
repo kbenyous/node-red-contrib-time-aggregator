@@ -1,0 +1,18 @@
+<script type="text/javascript">
+    RED.nodes.registerType('time-aggregator',{
+        category: 'function',
+        color: '#A6BBCF',
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "function.png",
+        label: function() {
+            return this.name||"time-aggregator";
+        },
+        outputLabel: function(index){
+            return this.id+ " output #"+index;
+        }
+    });
+</script>

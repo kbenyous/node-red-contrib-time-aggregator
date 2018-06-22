@@ -1,0 +1,29 @@
+{
+    "name": "node-red-contrib-time-aggregator",
+    "version": "0.0.1",
+    "description": "A Node-Red node that aggregates data over a time span",
+    "main": "aggregator/aggregator.js",
+    "author": "Karim BEN YOUSSEF",
+    "license": "GPLv3",
+    "dependencies": {
+      "simple-statistics": "^2.1.0"
+    },
+    "node-red": {
+      "nodes": {
+        "aggregator": "aggregator/aggregator.js"
+      }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kbenyous/node-red-contrib-time-aggregator.git"
+      },
+    "devDependencies": {},    
+    "keywords": [
+      "node-red",
+      "aggregator"
+    ],
+    "bugs": {
+      "url": "https://github.com/kbenyous/node-red-contrib-time-aggregator/issues"
+    },
+    "homepage": "https://github.com/kbenyous/node-red-contrib-time-aggregator#readme"
+  }
