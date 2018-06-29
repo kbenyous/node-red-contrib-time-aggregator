@@ -3,10 +3,12 @@
         category: 'function',
         color: '#A6BBCF',
         defaults: {
-            name: {value:""}
+            name: {value:""},
+            intervalUnit: {value: "d", required: true },
+            aggregationType: {value: "sum"},
         },
         inputs:1,
-        outputs:1,
+        outputs:2,
         icon: "function.png",
         label: function() {
             return this.name||"time-aggregator";
@@ -15,4 +17,31 @@
             return this.id+ " output #"+index;
         }
     });
+</script>
+
+
+<script type="text/x-red" data-template-name="time-aggregator">
+    <div class="form-row">
+        <label for="node-input-aggregationType"><i class="fa fa-dot-circle-o"></i> Aggregate by</label>
+        <select style="width: 70%" id="node-input-aggregationType">
+            <option value="mean">Mean value (Average)</option>
+            <option value="geometricMean">Geometric mean value</option>
+            <option value="harmonicMean">Harmonic mean value</option>
+            <option value="median">Median value</option>
+            <option value="min">Minimum value</option>
+            <option value="max">Maximum value</option>
+            <option value="sum">Sum value</option>
+            <option value="interval">Interval witdh (max - min)</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-intervalCount">last</label>   
+        <select style="width: 100px" id="node-input-intervalCount">
+            <option value="m">minute</option>
+            <option value="h">hour</option>
+            <option value="d">day</option>
+            <option value="M">month</option>
+        </select><br/>
+    </div>
+
 </script>
